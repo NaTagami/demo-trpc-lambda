@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es2018"],
+    "outDir": "./dist",
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["cdk.out"],
+  "references": [{ "path": "../server" }]
+}

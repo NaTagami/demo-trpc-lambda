@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": ["es2018"],
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "composite": true
+  }
+}
