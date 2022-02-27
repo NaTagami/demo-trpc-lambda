@@ -25,17 +25,7 @@ export const appRouter = trpc
             : null,
       },
     };
-  }); /*
-  .mutation('createUser', {
-    // validate input with Zod
-    input: z.object({ name: z.string().min(5) }),
-    async resolve(req) {
-      // use your ORM of choice
-      return await UserModel.create({
-        data: req.input,
-      });
-    },
-  });*/
+  });
 
 // export type definition of API
 export type AppRouter = typeof appRouter;
@@ -50,14 +40,7 @@ const createContext = ({
 };
 
 type Context = trpc.inferAsyncReturnType<typeof createContext>;
-/*
-app.use((req: any, _res: any, next: any) => {
-  // request logger
-  console.log('⬅️ ', req.method, req.path, req.body ?? req.query);
 
-  next();
-});
-*/
 app.use(
   '/',
   trpcExpress.createExpressMiddleware({
@@ -65,16 +48,3 @@ app.use(
     createContext,
   })
 );
-
-/*
-const router = express.Router();
-
-router.get('/hello', (req, res) => {
-  res.json({ message: 'Hello World!' });
-});
-
-router.get('/users', (req, res) => {
-  res.json([{ name: 'Taro' }, { name: 'Hanako' }]);
-});
-app.use('/', router);
-*/
