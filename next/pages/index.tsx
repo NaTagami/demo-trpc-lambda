@@ -2,9 +2,11 @@ import { trpc } from '../utils/trpc';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+//import { UserName } from '../../common';
+import { UserName } from '@trpc-lambda-demo/common';
 
 const Home: NextPage = () => {
-  const hello = trpc.useQuery(['hello', { name: 'Naoki' }]);
+  const hello = trpc.useQuery(['hello', { name: UserName.parse('Naoki') }]);
   if (!hello.data) {
     return <div>Loading...</div>;
   }

@@ -3,12 +3,13 @@ import * as express from 'express';
 import * as trpc from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { z, ZodError } from 'zod';
+import { UserName } from '@trpc-lambda-demo/common';
 
 export const appRouter = trpc
   .router()
   .query('hello', {
     input: z.object({
-      name: z.string(),
+      name: UserName,
     }),
     async resolve(req) {
       return { message: `Hello ${req.input.name}` };

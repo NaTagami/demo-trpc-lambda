@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
-    "@types/react": "^17.0.39"
+    "@types/react": "^17.0.39",
+    "next-transpile-modules": "^9.0.0"
   }
 }

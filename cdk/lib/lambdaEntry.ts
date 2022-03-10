@@ -1,4 +1,4 @@
-import { app } from '@sample-monorepo/server';
+import { app } from '@trpc-lambda-demo/server';
 
 import serverlessExpress from '@vendia/serverless-express';
 

@@ -11,6 +11,7 @@
   "license": "ISC",
   "workspaces": [
     "cdk",
+    "common",
     "server",
     "next"
   ],
